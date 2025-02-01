@@ -1,0 +1,249 @@
+$main-color: #f4f2ee;
+$yellow: #f29724;
+@for $i from 1 to 7 {
+  .w-1-#{$i} {
+    width: 100% / $i;
+  }
+}
+.w-2-3 {
+  width: 70%;
+}
+.w-66 {
+  width: 62.66%;
+}
+$color: (
+  "red": red,
+  "blue": blue,
+  "green": rgb(12, 138, 12),
+  "green-light": rgb(15, 211, 15),
+  "white": white,
+  "yellow": #f29724,
+  "black": black,
+);
+@each $key, $value in $color {
+  .bg-#{$key} {
+    background-color: $value;
+  }
+  .text-#{$key} {
+    color: $value;
+  }
+}
+@for $i from 5 to 50 {
+  .f-#{$i} {
+    font-size: $i* 1px ;
+  }
+  .fw-#{$i} {
+    font-weight: 100 * $i !important;
+  }
+}
+@for $i from 1 to 20 {
+  .p-#{$i} {
+    padding: $i * 2px;
+  }
+  .px-#{$i} {
+    padding-right: $i * 2px;
+    padding-left: $i * 2px;
+  }
+  .py-#{$i} {
+    padding-top: $i * 3px;
+    padding-bottom: $i * 3px;
+  }
+  .m-#{$i} {
+    margin: $i * 3px;
+  }
+  .mx-#{$i} {
+    margin-right: $i * 3px;
+    margin-left: $i * 3px;
+  }
+  .my-#{$i} {
+    margin-top: $i * 3px;
+    margin-bottom: $i * 3px;
+  }
+  .me-#{$i}{
+    margin-right: $i * 3px ;
+  }
+}
+
+.m-auto{
+  margin: auto;
+}
+.justify-start {
+    justify-content: space-evenly;
+}
+.space-evenly{
+  justify-content: space-evenly;
+}
+.justify-center {
+  justify-content:space-between
+}
+.col-center {
+  display: flex;
+  flex-wrap: wrap ; 
+  justify-content: center;
+}
+.column-center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap ; 
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+body {
+  background-color: $main-color;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: content-box;
+  font-family:  "Playfair Display", serif;
+  font-weight: 400 ;
+}
+.playfair {
+  font-family:  "Playfair Display", serif;
+}
+.Caveat-font {
+  font-family: "Caveat", serif !important ;
+}
+a {
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px rgb(36, 35, 35) solid;
+  font-size: 25px;
+  color: rgb(41, 39, 39);
+  text-decoration: none;
+  margin: 4px 9px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.active {
+  background-color: black;
+  color: white;
+}
+.border-0 {
+  border-spacing: 0px;
+}
+.radius-pill {
+  border-radius: 30px;
+}
+.vh-100 {
+  min-height: 100vh;
+}
+.m-auto {
+  margin: auto;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+p {
+  font-size: 20px;
+}
+
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.top-20 {
+  top: -20px;
+}
+.m-0 {
+    margin: 0;
+}
+@for $i from 5 to 10 {
+  .h-#{$i} {
+    height: $i * 18px;
+  }
+}
+.rounded {
+  border-radius: 20px;
+  transition: 1s ease-in-out all;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  .imgContainer {
+    // left: 50%;
+    // transform: translateX(-50%);
+    // width: auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -50px;
+
+    img {
+      width: 50%;
+      border-radius: 50%;
+      margin: auto;
+      transition: 1s ease-in-out all;
+    }
+  }
+}
+.x {
+  &:hover {
+    .rounded {
+      transform: scale(1.1);
+      &:hover {
+        img {
+          transform: rotate(520deg);
+        }
+      }
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+ 
+}
+
+.buttom {
+  // position: relative;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  
+  p {
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+  button {
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
+    border-radius: 40px;
+    width: 70%;
+    font-size: 20px;
+    padding: 10px 7px;
+    transition: 1s ease-in-out all;
+    &:hover {
+      background-color: rgb(23, 197, 20);
+    }
+
+  
+    a {
+      color: white;
+      margin: auto;
+      font-size: 17px;
+      padding: 5px ;
+      border: 0px solid black ;
+    }
+  }
+}
+
+.h-200{
+  height: 120px ;
+}
