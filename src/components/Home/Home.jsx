@@ -16,7 +16,7 @@ export default function Home() {
 
     try {
       // if ( arr.length == 14  ) { return null}
-      let {data} = await axios.get(`http://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken`)
+      let {data} = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken`)
       console.log(data);
       setArr(data.meals);
 

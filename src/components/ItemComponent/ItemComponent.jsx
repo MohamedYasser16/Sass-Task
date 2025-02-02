@@ -20,7 +20,7 @@ export default function ItemComponent() {
   async function getFun () {
     try {
       
-    let {data} = await axios.get(`http://www.themealdb.com/api/json/v1/1/search.php?s=${meal}`)
+    let {data} = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meal}`)
     console.log(data);
     console.log(data.meals );
     setObj(data.meals[0]);
